@@ -1,4 +1,4 @@
-﻿Kodicms-plugin-vkgroup
+﻿Kodicms-plugin-okgroup
 ======================
 
 Плагин виджета Одноклассники 2.0. 

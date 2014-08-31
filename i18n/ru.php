@@ -26,5 +26,4 @@ return array(
     'Width' => 'Ширина',
     'Height' => 'Высота',
     'Manual' => 'Задать вручную',
-    'Buttons' => 'Цвет кнопок'
 );

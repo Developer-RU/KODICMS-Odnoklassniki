@@ -35,9 +35,6 @@ class Plugin_Okgroup extends Plugin_Decorator {
             'height' => array(
                 array('not_empty'),
                 array('numeric'),
-            ),
-            'btncolor' => array(
-                array('color'),
             )
         );
     }
@@ -59,9 +56,6 @@ class Plugin_Okgroup extends Plugin_Decorator {
             ),
             'height' => array(
                 array('intval')
-            ),
-            'btncolor' => array(
-                array('trim')
             )
         );
     }
@@ -69,12 +63,9 @@ class Plugin_Okgroup extends Plugin_Decorator {
     public function labels() {
         return array(
             'group' => __('Group'),
-            'users' => __('Users'),
-            'news' => __('News'),
             'width' => __('Width'),
             'height' => __('Height'),            
             'manual' => __('Manual'),
-            'btncolor' => __('Buttons'),
         );
     }
 }
