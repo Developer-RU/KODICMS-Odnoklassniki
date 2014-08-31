@@ -41,6 +41,7 @@ class Plugin_Okgroup extends Plugin_Decorator {
 
     public function default_settings() {
         return array(
+		'group' => 50582132228315,
         'width' => 220,
         'height' => 400,
         );
