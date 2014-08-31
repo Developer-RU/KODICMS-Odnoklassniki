@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @Описание файла: "okgroup"
+ * @Описание файла: "okgroup 2.0"
  * 
  * -------
  * 
@@ -18,7 +18,7 @@
 ?>
 
 <div class="widget-content">
-	<?php echo HTML::anchor('http://apiok.ru/wiki/pages/viewpage.action?pageId=42476655', 'Okgroup FAQ', array(
+	<?php echo HTML::anchor('http://apiok.ru/wiki/pages/viewpage.action?pageId=42476655', 'Odnoklassniki FAQ', array(
 		'class' => 'popup fancybox.iframe btn btn-info'
 	)); ?>
 </div>

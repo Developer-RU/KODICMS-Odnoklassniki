@@ -1,6 +1,7 @@
 <?php
+
 /**
- * @Описание файла: "okgroup"
+ * @Описание файла: "okgroup 2.0"
  * 
  * -------
  * 
@@ -13,6 +14,7 @@
  * @URL https://github.com/Developer-RU
  * 
  */
+
 ?>
 <div class="row">
     <div class="col-sm-3">
@@ -24,10 +26,10 @@
                 <?php echo $form; ?>
                 <div class="control-group">
 
-                    <div class="controls">
-                        <input class = 'form-control' id="setting_group" type="text" size="14" placeholder="Идентификатор">
+                    <div class="input-group">
+                        <div class="input-group-addon">Group</div>
+                        <?php echo Form::input('setting[group]', $plugin->get('group'), array('id' => 'setting_group', 'class' => 'form-control', 'placeholder' => Arr::get($plugin->labels(), 'group'))); ?>
                     </div>
-
 
                     <hr class="divider">
 
@@ -63,9 +65,10 @@
                     </div>
 
                     <br><br>
-                    
-                    <div class="controls">
-                        <input class = 'form-control' id="width-num" type="text" size="11" value="Задать вручную (в px)">
+
+                    <div class="input-group">
+                        <?php echo Form::input('setting[width]', $plugin->get('width'), array('id' => 'setting_width', 'class' => 'form-control', 'placeholder' => Arr::get($plugin->labels(), 'manual'))); ?>
+                        <div class="input-group-addon">.px</div>
                     </div>
 
                     <br><br>
@@ -102,11 +105,12 @@
                     </div>
 
                     <br><br>
-                    
-                    <div class="controls">
-                        <input class = 'form-control' id="height-num" type="text" size="11" value="Задать вручную (в px)">
-                    </div>
 
+                    <div class="input-group">
+                        <?php echo Form::input('setting[height]', $plugin->get('height'), array('id' => 'setting_height', 'class' => 'form-control', 'placeholder' => Arr::get($plugin->labels(), 'manual'))); ?>
+                        <div class="input-group-addon">.px</div>
+                    </div>
+                    
                 </div>
                 <?php echo Form::close(); ?>
             </div>
@@ -116,7 +120,7 @@
     <div class="col-sm-9">	
         <div class="panel">
             <div class="panel-heading">
-                <span class="panel-title"><?php echo __('Тип виджета и внешний вид'); ?></span>
+                <span class="panel-title"><?php echo __('Preview'); ?></span>
             </div> 
             <div class="panel-body">
 
@@ -136,31 +140,17 @@
                             }
                         }
                         d.documentElement.appendChild(js);
-                    }(document, "ok_group_widget", "50582132228315", "{width:600,height:300}");
+                    }(document, "ok_group_widget", "<?php echo $plugin->get('group'); ?>", "{width:<?php echo $plugin->get('width'); ?>,height:<?php echo $plugin->get('height'); ?>}");
                 </script>
+                <noscript>Please enable JavaScript to view the widget Okgroup.</a></noscript>
 
-
-
-                <noscript>Please enable JavaScript to view the widget Okgroup.</a></noscript><br>
                 <hr class="divider">
                 <p><b>Написать разработчику:  </b>   <a href="mailto:p.masyukov@yandex.ru" class="dsq-brlink">p.masyukov@yandex.ru</a></p>
-                <p><b>Последняя версия с GitHub: </b>   <code>https://github.com/Developer-RU/Kodicms-plugin-vkgroup.git</code></p><br>
+                <p><b>Последняя версия с GitHub: </b>   <code>https://github.com/Developer-RU/Kodicms-plugin-odnoklassniki</code></p>
             </div>
         </div>
     </div>
 
 </div>
 
-<link href="/cms/plugins/okgroup/vendor/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 <link href="/cms/plugins/okgroup/vendor/okgroup.css" rel="stylesheet">
-
-<script>
-    $(function() {
-        // $('#setting_bgcolor').colorpicker();
-    });
-</script>
-<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="/cms/plugins/okgroup/vendor/colorpicker/js/bootstrap-colorpicker.js"></script>

@@ -3,7 +3,7 @@
 defined('SYSPATH') or die('No direct script access.');
 
 /**
- * @Описание файла: "okgroup"
+ * @Описание файла: "okgroup 2.0"
  * 
  * -------
  * 
@@ -16,8 +16,9 @@ defined('SYSPATH') or die('No direct script access.');
  * @URL https://github.com/Developer-RU
  * 
  */
+
 Plugin::factory('okgroup', array(
     'title' => 'Okgroup',
     'description' => 'Виджет группы Одноклассники',
-    'version' => '1.0.0',
+    'version' => '2.0.0',
 ))->register();

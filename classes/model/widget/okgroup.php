@@ -3,7 +3,7 @@
 defined('SYSPATH') or die('No direct access allowed.');
 
 /**
- * @Описание файла: "okgroup"
+ * @Описание файла: "okgroup 2.0"
  * 
  * -------
  * 

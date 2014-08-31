@@ -3,7 +3,7 @@
 defined('SYSPATH') or die('No direct access allowed.');
 
 /**
- * @Описание файла: "okgroup"
+ * @Описание файла: "okgroup 2.0"
  * 
  * -------
  * 
@@ -18,13 +18,13 @@ defined('SYSPATH') or die('No direct access allowed.');
  */
 
 return array(
-    'Vkgroup'=>'Виджет Вконтакте',
+    'Okgroup'=>'Виджет Вконтакте',
     'Group' => 'Идентификатор',
     'Widget' => 'Виджет группы Вконтакте',
+    'Preview' => 'Предпросмотр',
     'Settings' => 'Настройки',
     'Width' => 'Ширина',
     'Height' => 'Высота',
-    'Background' => 'Цвет фона',
-    'Color' => 'Цвет текста',
-    'Buttons' => 'Цвет кнопок',
+    'Manual' => 'Задать вручную',
+    'Buttons' => 'Цвет кнопок'
 );
