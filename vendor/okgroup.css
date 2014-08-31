@@ -212,7 +212,8 @@ a img {border: 0;}
         *display: inline;
         *zoom: 1;
         vertical-align: top;
-        margin-right: 30px;
+        margin-right: 0px;
+        width: 100%;
         }
 
     .btn-wiz_form_list button:disabled,
@@ -242,15 +243,17 @@ a img {border: 0;}
         -webkit-border-radius: 50em;
         -moz-border-radius: 50em;
         border-radius: 50em;
+        width: inherit;
         }
 
     .btn-wiz_size_list {
         border-bottom: 2px solid #999;
-        width: 200px;
+        width: auto;
         color: #fff;
         position: relative;
         padding-top: 2px;
         margin-left: 10px;
+        margin-right: 10px;
         margin-top: 10px;
         }
 
@@ -299,7 +302,7 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i2 {
-            left: 20px;
+            left: 7%;
             }
 
             .btn-wiz_size_i2 .btn-wiz_size_i {
@@ -308,7 +311,7 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i3 {
-            left: 52px;
+            left: 19%;
             }
 
             .btn-wiz_size_i3 .btn-wiz_size_i {
@@ -318,7 +321,7 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i4 {
-            left: 84px;
+            left: 32%;
             }
 
             .btn-wiz_size_i4 .btn-wiz_size_i {
@@ -327,7 +330,7 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i5 {
-            left: 118px;
+            left: 46%;
             }
 
             .btn-wiz_size_i5 .btn-wiz_size_i {
@@ -337,7 +340,7 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i6 {
-            left: 150px;
+            left: 62%;
             }
 
             .btn-wiz_size_i6 .btn-wiz_size_i {
@@ -346,12 +349,21 @@ a img {border: 0;}
                 }
 
         .btn-wiz_size_i7 {
-            left: 185px;
+            left: 80%;
             }
 
             .btn-wiz_size_i7 .btn-wiz_size_i {
                 width: 12px;
                 height: 12px;
+                box-shadow: 0 0 1px 0px #999;
+                }
+        .btn-wiz_size_i8 {
+            left: 98%;
+            }
+
+            .btn-wiz_size_i8 .btn-wiz_size_i {
+                width: 14px;
+                height: 14px;
                 box-shadow: 0 0 1px 0px #999;
                 }
         .btn-wiz_size_i_w__active .btn-wiz_size_i,

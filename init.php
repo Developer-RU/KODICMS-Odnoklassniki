@@ -21,4 +21,5 @@ Plugin::factory('okgroup', array(
     'title' => 'Okgroup',
     'description' => 'Виджет группы Одноклассники',
     'version' => '2.0.0',
+    'author' => 'Масюков Павел',
 ))->register();

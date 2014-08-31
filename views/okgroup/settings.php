@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @Описание файла: "okgroup 2.0"
  * 
@@ -14,7 +13,6 @@
  * @URL https://github.com/Developer-RU
  * 
  */
-
 ?>
 <div class="row">
     <div class="col-sm-3">
@@ -39,27 +37,14 @@
                         </div>
                         <div class="btn-wiz_size_list_w">
                             <div class="btn-wiz_width  btn-wiz_size_list">
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i1">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i2">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i3">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i4"> <!-- btn-wiz_size_i_w__active -->
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i5">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i6">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i7">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
+
+                                <?php for ($i = 1; $i <= 8; $i++): ?>
+                                    <div id="w<?php echo $i ?>" class="btn-wiz_size_i_w btn-wiz_size_i<?= $i ?>">
+                                        <div onclick="add('width', '<?php echo $i?>');" class="btn-wiz_size_i"></div>
+                                    </div>
+                                <?php endfor; ?>
+                                <!--   btn-wiz_size_i_w__active   -->
+
                             </div>
                         </div>
                     </div>
@@ -78,28 +63,15 @@
                             Высота
                         </div>
                         <div class="btn-wiz_size_list_w">
-                            <div class="btn-wiz_height btn-wiz_size_list">
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i1">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i2">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i3"> <!--   btn-wiz_size_i_w__active   -->
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i4">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i5">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i6">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
-                                <div class="btn-wiz_size_i_w btn-wiz_size_i7">
-                                    <div class="btn-wiz_size_i"></div>
-                                </div>
+                            <div class="btn-wiz_height btn-wiz_size_list">                                
+
+                                <?php for ($i = 1; $i <= 8; $i++): ?>
+                                    <div id="h<?php echo $i ?>" class="btn-wiz_size_i_w btn-wiz_size_i<?= $i ?>">
+                                        <div onclick="add('height', '<?php echo $i ?>');" class="btn-wiz_size_i"></div>
+                                    </div>
+                                <?php endfor; ?>
+                                <!--   btn-wiz_size_i_w__active   -->
+
                             </div>
                         </div>
                     </div>
@@ -110,7 +82,7 @@
                         <?php echo Form::input('setting[height]', $plugin->get('height'), array('id' => 'setting_height', 'class' => 'form-control', 'placeholder' => Arr::get($plugin->labels(), 'manual'))); ?>
                         <div class="input-group-addon">.px</div>
                     </div>
-                    
+
                 </div>
                 <?php echo Form::close(); ?>
             </div>
@@ -144,9 +116,6 @@
                 </script>
                 <noscript>Please enable JavaScript to view the widget Okgroup.</a></noscript>
 
-                <hr class="divider">
-                <p><b>Написать разработчику:  </b>   <a href="mailto:p.masyukov@yandex.ru" class="dsq-brlink">p.masyukov@yandex.ru</a></p>
-                <p><b>Последняя версия с GitHub: </b>   <code>https://github.com/Developer-RU/Kodicms-plugin-odnoklassniki</code></p>
             </div>
         </div>
     </div>
@@ -154,3 +123,15 @@
 </div>
 
 <link href="/cms/plugins/okgroup/vendor/okgroup.css" rel="stylesheet">
+<script type="text/javascript">
+    var id = null;
+    var inp = null;
+    function add(inp, id) {
+        $("#setting_"+inp).attr("value",id+'00');
+        if(inp == 'height')
+            $( "#h" + id ).addClass( "btn-wiz_size_i_w__active" );
+        else
+            $( "#w" + id ).addClass( "btn-wiz_size_i_w__active" );
+    }
+</script>
+
